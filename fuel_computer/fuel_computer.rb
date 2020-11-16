@@ -24,5 +24,12 @@ class FuelComputer
     end
     total
   end
+
+  def fuel_recursive(mass)
+    new_fuel = [(mass / 3) - 2, 0].max
+    return new_fuel if new_fuel == 0
+    new_fuel + fuel_recursive(new_fuel)
+  end
+
 end
 

@@ -21,5 +21,12 @@ describe FuelComputer do
       end
     end
   end
+
+  describe 'fuel_recursive' do
+    let(:mass) { 1969 }
+    subject { computer.fuel_recursive(196900000) }
+
+    it { is_expected.to eq 966 }
+  end
 end
 
